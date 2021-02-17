@@ -1,0 +1,35 @@
+
+S-Cart command line
+(Last update: 2020-10-27 23:00:06)
+The useful command lines will support S-Cart since version 4.x:
+
+To view S-Cart version information
+
+    php artisan sc:info
+
+To update the core version of S-Cart:
+
+    composer update s-cart/core
+
+Or you can use php composer.phar update s-cart/core if you don't have composer installed.
+
+To create a new plugin:
+
+    php artisan sc:make plugin --name=Group\PluginName
+
+Example: php artisan sc:make plugin --name=Payment\Paypal
+
+To create data backup file (The sql file is stored in storage/backups):
+
+    php artisan sc:backup --path=abc.sql
+
+To recover data:
+
+    php artisan sc:restore --path =abc.sql
+
+To manually customize the admin page:
+
+    php artisan sc:customize admin
+
+This command will create new directories resources/views/admin and file config/admin.php
+After set the value customize=true in config/admin.php you can modify template admin.  More detail HERE 
